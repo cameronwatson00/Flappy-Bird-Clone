@@ -4,7 +4,7 @@ function Bird(){
 	this.pos = new p5.Vector(150, 250);
 	this.velocity = new p5.Vector(0,0);
 	this.gravity = new p5.Vector(0, 0.5);
-	this.flap = new p5.Vector(0, -10);
+	this.flap = new p5.Vector(0, -8);
 
 	this.show = function(){
 		fill(255,0,0);
