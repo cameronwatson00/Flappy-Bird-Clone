@@ -13,7 +13,7 @@ function draw(){
 	background(51);
 	count++;
 
-	if(count % 150 == 0){
+	if(count == 150){
 		pipes.push(new Pipe());
 		count = 0;
 	}
