@@ -1,6 +1,6 @@
 function Bird(){
 
-	this.w = 35;
+	this.r = 20;
 	this.pos = new p5.Vector(150, 250);
 	this.velocity = new p5.Vector(0,0);
 	this.gravity = new p5.Vector(0, 0.5);
@@ -10,7 +10,8 @@ function Bird(){
 		fill(255,0,0);
 		stroke(0);
 		strokeWeight(1);
-		ellipse(this.pos.x, this.pos.y, this.w, this.w);
+		ellipseMode(RADIUS);
+		ellipse(this.pos.x, this.pos.y, this.r, this.r);
 	}
 
 	this.update = function(){
@@ -25,8 +26,8 @@ function Bird(){
 		if(this.pos.y >= height){
 			this.velocity.y = 0;
 			this.pos.y = height;
+			gameOver = true;
 		}
-
 	}
 
 	this.applyFlap = function(){

@@ -3,16 +3,16 @@ function Pipe(){
 	this.xpos = width+1;
 	this.distanceBetween = 120;
 	this.w = 55;
-	this.color = 'green';
-
 	this.topBar = random(50,height-200);
-	this.bottomBar = this.topBar + this.distanceBetween;
+	this.bottomBar = this.topBar + this.distanceBetween;	
+	this.topY = -1;
+	this.past = false;
 
 	this.show = function(){
 		stroke(0);
 		strokeWeight(2);
-		fill(this.color);
-		rect(this.xpos, -1, this.w ,this.topBar);
+		fill(0,255,0);
+		rect(this.xpos, this.topY, this.w ,this.topBar);
 		rect(this.xpos, this.bottomBar, this.w ,height - this.topBar + 1);
 	}
 
